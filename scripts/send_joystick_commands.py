@@ -1,9 +1,10 @@
 import pygame
 from pygame.locals import *
 import socket
+from time import sleep
 pygame.init()
 width, height = 64*10, 64*8
-HOST = '127.0.0.1'  # Standard loopback interface address (localhost)
+HOST = '192.168.2.120'  # Standard loopback interface address (localhost)
 PORT = 2000        # Port to listen on (non-privileged ports are > 1023)
 state_dict = {"press":pygame.KEYDOWN,"lift":pygame.KEYUP}
 # This distionary holds the important key ids and their current state
@@ -71,7 +72,9 @@ def main():
 
             c = get_robot_commands()
             s.sendall(c)
-            data = s.recv(1024)
+            sleep(0.2)
+            #data = s.recv(1024)
+            
             # if data:
             #     print(data.decode('utf-8'))
         s.sendall(b'x') 
