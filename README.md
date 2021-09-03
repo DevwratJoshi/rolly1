@@ -13,7 +13,7 @@ The robot consists of a raspberry pi model 3B microcontroller for high-level con
 |Pin | Connection | 
 |:--:| :---------: |
 |3| Left wheel pwm |
-|5,4| Left wheel direction|
+|5,6| Left wheel direction|
 |9| Right wheel pwm |
 |8,7| Right wheel direction|
 |10| Left ultrasonic sensor motor control |
